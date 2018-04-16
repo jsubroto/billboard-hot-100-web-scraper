@@ -14,6 +14,16 @@ page_soup = soup(page_html, "html.parser")
 # Grabs divs, each containing the song and artist name
 containers = page_soup.findAll('div', {'class': 'chart-row__title'})
 
+filename = 'billboard_hot_100.csv'
+f = open(filename, 'w') # w = write
+
+headers = 'Song, Artist\n'
+
+f.write(headers)
+
+print('Welcome to Jaimes Subroto\'s Billboard Hot 100 Python Web Scraper!')
+print('Printing this week\'s HOTTEST 100 songs...')
+
 chart_position = 1
 
 # Loops through each container
@@ -34,3 +44,10 @@ for container in containers:
     print('Artist: {}'.format(artist))
 
     chart_position += 1
+
+    f.write(song + ',\"' + artist.replace('Featuring', 'Feat.') + '\"\n')
+
+f.close()
+
+print('\nWeb scraped data saved to {}'.format(filename))
+print('Thank you for using Jaimes Subroto\'s Web Scraping app for Billboard HOT 100!')
