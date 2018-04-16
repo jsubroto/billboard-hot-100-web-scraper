@@ -11,13 +11,13 @@ uClient.close() # Close the client
 # HTML parsing
 page_soup = soup(page_html, "html.parser")
 
-# Grabs divs, each containing the song and artist name
-containers = page_soup.findAll('div', {'class': 'chart-row__title'})
+# Grabs all information related to the top 100 songs
+containers = page_soup.select('article[class*=chart]') # *= means contains
 
 filename = 'billboard_hot_100.csv'
 f = open(filename, 'w') # w = write
 
-headers = 'Song, Artist\n'
+headers = 'Song, Artist, Last Week, Peak Position, Weeks on Chart\n'
 
 f.write(headers)
 
@@ -29,23 +29,41 @@ chart_position = 1
 # Loops through each container
 for container in containers:
 
+    # Container storing the song name and artist name
+    song_container = container.find('div', {'class': 'chart-row__title'})
+
     # Grabs the song name
-    song = container.h2.text
+    song = song_container.h2.text
     
     # Grabs the artist name
     try:
-        artist = container.a.text.strip()
+        artist = song_container.a.text.strip()
     except AttributeError:
-        artist = container.span.text.strip()
+        artist = song_container.span.text.strip()
 
-    # Prints the chart position, song name, and artist name
+    # Grabs the song's position last week
+    last_week_container = container.find('div', {'class': 'chart-row__last-week'})
+    last_week = last_week_container.find('span', {'class': 'chart-row__value'}).text
+
+    # Grabs the song's peak position
+    peak_position_container = container.find('div', {'class': 'chart-row__top-spot'})
+    peak_position = peak_position_container.find('span', {'class': 'chart-row__value'}).text
+
+    # Grabs the song's duration in the hot 100 (in weeks)
+    weeks_on_chart_container = container.find('div', {'class': 'chart-row__weeks-on-chart'})
+    weeks_on_chart = weeks_on_chart_container.find('span', {'class': 'chart-row__value'}).text
+
+    # Prints the chart position, song name, artist name, and related stats
     print('\nPosition: #{}'.format(chart_position))
     print('Song: {}'.format(song))
     print('Artist: {}'.format(artist))
+    print('Last Week: {}'.format(last_week))
+    print('Peak Position: {}'.format(peak_position))
+    print('Weeks on Chart: {}'.format(weeks_on_chart))
 
     chart_position += 1
 
-    f.write(song + ',\"' + artist.replace('Featuring', 'Feat.') + '\"\n')
+    f.write('\"' + song + '\",\"' + artist.replace('Featuring', 'Feat.') + '\",' + last_week + ',' + peak_position + ',' + weeks_on_chart + '\n')
 
 f.close()
 

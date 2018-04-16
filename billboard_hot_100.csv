@@ -1,101 +1,101 @@
-Song, Artist
-God's Plan,"Drake"
-Meant To Be,"Bebe Rexha & Florida Georgia Line"
-Psycho,"Post Malone Feat. Ty Dolla $ign"
-Call Out My Name,"The Weeknd"
-Look Alive,"BlocBoy JB Feat. Drake"
-The Middle,"Zedd, Maren Morris & Grey"
-Perfect,"Ed Sheeran"
-Finesse,"Bruno Mars & Cardi B"
-Freaky Friday,"Lil Dicky Feat. Chris Brown"
-Walk It Talk It,"Migos Feat. Drake"
-Havana,"Camila Cabello Feat. Young Thug"
-Mine,"Bazzi"
-Plug Walk,"Rich The Kid"
-Never Be The Same,"Camila Cabello"
-Pray For Me,"The Weeknd & Kendrick Lamar"
-Be Careful,"Cardi B"
-Stir Fry,"Migos"
-Sad!,"XXXTentacion"
-All The Stars,"Kendrick Lamar & SZA"
-Ric Flair Drip,"Offset & Metro Boomin"
-Rockstar,"Post Malone Feat. 21 Savage"
-New Rules,"Dua Lipa"
-Whatever It Takes,"Imagine Dragons"
-Let You Down,"NF"
-Friends,"Marshmello & Anne-Marie"
-Try Me,"The Weeknd"
-Wasted Times,"The Weeknd"
-Heaven,"Kane Brown"
-Thunder,"Imagine Dragons"
-Wait,"Maroon 5"
-In My Blood,"Shawn Mendes"
-Him & I,"G-Eazy & Halsey"
-Lights Down Low,"MAX Feat. gnash"
-Powerglide,"Rae Sremmurd & Juicy J"
-I Was Never There,"The Weeknd Feat. Gesaffelstein"
-You Make It Easy,"Jason Aldean"
-Say Something,"Justin Timberlake Feat. Chris Stapleton"
-Feel It Still,"Portugal. The Man"
-I Fall Apart,"Post Malone"
-King's Dead,"Jay Rock, Kendrick Lamar, Future & James Blake"
-New Freezer,"Rich The Kid Feat. Kendrick Lamar"
-Bad At Love,"Halsey"
-Hurt You,"The Weeknd Feat. Gesaffelstein"
-Marry Me,"Thomas Rhett"
-Medicine,"Queen Naija"
-Delicate,"Taylor Swift"
-X,"Nicky Jam x J Balvin"
-Lemon,"N*E*R*D & Rihanna"
-Most People Are Good,"Luke Bryan"
-Singles You Up,"Jordan Davis"
-Bartier Cardi,"Cardi B Feat. 21 Savage"
-Privilege,"The Weeknd"
-Japan,"Famous Dex"
-Outside Today,"YoungBoy Never Broke Again"
-No Excuses,"Meghan Trainor"
-Love Lies,"Khalid & Normani"
-IDGAF,"Dua Lipa"
-Changes,"XXXTentacion"
-Dura,"Daddy Yankee"
-Billy,"6ix9ine"
-Zombie,"Bad Wolves"
-Tell Me You Love Me,"Demi Lovato"
-El Farsante,"Ozuna & Romeo Santos"
-Broken Halos,"Chris Stapleton"
-The Long Way,"Brett Eldredge"
-Tequila,"Dan + Shay"
-One Number Away,"Luke Combs"
-Hardaway,"Derez De'Shon"
-Everyday,"Logic & Marshmello"
-Top Off,"DJ Khaled Feat. JAY Z, Future & B"
-Moonlight,"XXXTentacion"
-Sit Next To Me,"Foster The People"
-I Like Me Better,"Lauv"
-Sativa,"Jhene Aiko Feat. Swae Lee Or Rae Sremmurd"
-All On Me,"Devin Dawson"
-Five More Minutes,"Scotty McCreery"
-Red Roses,"Lil Skies Feat. Landon Cube"
-Boo'd Up,"Ella Mai"
-She's With Me,"High Valley"
-When We,"Tank"
-I Lived It,"Blake Shelton"
-Broken Clocks,"SZA"
-Up Down,"Morgan Wallen Feat. Florida Georgia Line"
-No Roots,"Alice Merton"
-Nowadays,"Lil Skies Feat. Landon Cube"
-Say Amen (Saturday Night),"Panic! At The Disco"
-No Smoke,"YoungBoy Never Broke Again"
-Tempo,"Chris Brown"
-OKRA,"Tyler, The Creator"
-For The First Time,"Darius Rucker"
-Echame La Culpa,"Luis Fonsi & Demi Lovato"
-Take Back Home Girl,"Chris Lane Feat. Tori Kelly"
-Written In The Sand,"Old Dominion"
-Woman, Amen,"Dierks Bentley"
-La Modelo,"Ozuna x Cardi B"
-Proud,"2 Chainz Feat. YG & Offset"
-Beautiful Trauma,"P!nk"
-NBAYoungboat,"Lil Yachty Feat. NBA YoungBoy"
-Get You,"Daniel Caesar Feat. Kali Uchis"
-Focus,"H.E.R."
+Song, Artist, Last Week, Peak Position, Weeks on Chart
+"God's Plan","Drake",1,1,11
+"Meant To Be","Bebe Rexha & Florida Georgia Line",2,2,24
+"Psycho","Post Malone Feat. Ty Dolla $ign",4,2,6
+"Call Out My Name","The Weeknd",--,4,1
+"Look Alive","BlocBoy JB Feat. Drake",6,5,8
+"The Middle","Zedd, Maren Morris & Grey",7,6,10
+"Perfect","Ed Sheeran",5,1,32
+"Finesse","Bruno Mars & Cardi B",3,3,14
+"Freaky Friday","Lil Dicky Feat. Chris Brown",8,8,3
+"Walk It Talk It","Migos Feat. Drake",15,10,10
+"Havana","Camila Cabello Feat. Young Thug",10,1,34
+"Mine","Bazzi",11,11,11
+"Plug Walk","Rich The Kid",18,13,8
+"Never Be The Same","Camila Cabello",14,14,16
+"Pray For Me","The Weeknd & Kendrick Lamar",12,7,9
+"Be Careful","Cardi B",--,16,1
+"Stir Fry","Migos",13,8,15
+"Sad!","XXXTentacion",9,7,5
+"All The Stars","Kendrick Lamar & SZA",16,7,13
+"Ric Flair Drip","Offset & Metro Boomin",17,13,23
+"Rockstar","Post Malone Feat. 21 Savage",21,1,29
+"New Rules","Dua Lipa",20,6,36
+"Whatever It Takes","Imagine Dragons",23,23,10
+"Let You Down","NF",19,12,25
+"Friends","Marshmello & Anne-Marie",30,25,8
+"Try Me","The Weeknd",--,26,1
+"Wasted Times","The Weeknd",--,27,1
+"Heaven","Kane Brown",28,28,15
+"Thunder","Imagine Dragons",24,4,49
+"Wait","Maroon 5",26,26,12
+"In My Blood","Shawn Mendes",22,22,3
+"Him & I","G-Eazy & Halsey",25,14,18
+"Lights Down Low","MAX Feat. gnash",27,20,26
+"Powerglide","Rae Sremmurd & Juicy J",38,34,5
+"I Was Never There","The Weeknd Feat. Gesaffelstein",--,35,1
+"You Make It Easy","Jason Aldean",34,28,10
+"Say Something","Justin Timberlake Feat. Chris Stapleton",33,9,10
+"Feel It Still","Portugal. The Man",32,4,42
+"I Fall Apart","Post Malone",29,16,28
+"King's Dead","Jay Rock, Kendrick Lamar, Future & James Blake",31,21,12
+"New Freezer","Rich The Kid Feat. Kendrick Lamar",42,41,10
+"Bad At Love","Halsey",37,5,31
+"Hurt You","The Weeknd Feat. Gesaffelstein",--,43,1
+"Marry Me","Thomas Rhett",35,30,18
+"Medicine","Queen Naija",--,45,1
+"Delicate","Taylor Swift",52,46,4
+"X","Nicky Jam x J Balvin",51,47,5
+"Lemon","N*E*R*D & Rihanna",36,36,22
+"Most People Are Good","Luke Bryan",46,46,10
+"Singles You Up","Jordan Davis",50,50,9
+"Bartier Cardi","Cardi B Feat. 21 Savage",47,14,15
+"Privilege","The Weeknd",--,52,1
+"Japan","Famous Dex",70,53,2
+"Outside Today","YoungBoy Never Broke Again",40,31,12
+"No Excuses","Meghan Trainor",55,46,5
+"Love Lies","Khalid & Normani",49,43,7
+"IDGAF","Dua Lipa",54,54,12
+"Changes","XXXTentacion",39,37,5
+"Dura","Daddy Yankee",53,50,9
+"Billy","6ix9ine",57,50,6
+"Zombie","Bad Wolves",65,54,4
+"Tell Me You Love Me","Demi Lovato",59,53,19
+"El Farsante","Ozuna & Romeo Santos",63,49,10
+"Broken Halos","Chris Stapleton",58,45,19
+"The Long Way","Brett Eldredge",68,65,9
+"Tequila","Dan + Shay",74,66,4
+"One Number Away","Luke Combs",73,67,3
+"Hardaway","Derez De'Shon",61,61,9
+"Everyday","Logic & Marshmello",67,29,5
+"Top Off","DJ Khaled Feat. JAY Z, Future & B",66,22,5
+"Moonlight","XXXTentacion",48,35,3
+"Sit Next To Me","Foster The People",78,72,3
+"I Like Me Better","Lauv",76,73,8
+"Sativa","Jhene Aiko Feat. Swae Lee Or Rae Sremmurd",80,74,4
+"All On Me","Devin Dawson",62,52,19
+"Five More Minutes","Scotty McCreery",72,44,18
+"Red Roses","Lil Skies Feat. Landon Cube",69,69,13
+"Boo'd Up","Ella Mai",--,78,1
+"She's With Me","High Valley",81,79,6
+"When We","Tank",82,78,14
+"I Lived It","Blake Shelton",83,81,5
+"Broken Clocks","SZA",--,82,2
+"Up Down","Morgan Wallen Feat. Florida Georgia Line",86,83,2
+"No Roots","Alice Merton",100,84,2
+"Nowadays","Lil Skies Feat. Landon Cube",84,55,13
+"Say Amen (Saturday Night)","Panic! At The Disco",60,60,2
+"No Smoke","YoungBoy Never Broke Again",79,61,18
+"Tempo","Chris Brown",92,88,4
+"OKRA","Tyler, The Creator",--,89,1
+"For The First Time","Darius Rucker",95,90,2
+"Echame La Culpa","Luis Fonsi & Demi Lovato",90,47,20
+"Take Back Home Girl","Chris Lane Feat. Tori Kelly",--,92,1
+"Written In The Sand","Old Dominion",91,51,20
+"Woman, Amen","Dierks Bentley",--,94,1
+"La Modelo","Ozuna x Cardi B",94,52,14
+"Proud","2 Chainz Feat. YG & Offset",--,96,1
+"Beautiful Trauma","P!nk",88,78,15
+"NBAYoungboat","Lil Yachty Feat. NBA YoungBoy",75,63,4
+"Get You","Daniel Caesar Feat. Kali Uchis",99,93,5
+"Focus","H.E.R.",--,100,1
