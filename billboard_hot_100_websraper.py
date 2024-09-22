@@ -35,10 +35,8 @@ while True:
     else:
         print("Sorry, I didn't get that.")
 
-chart_position = 1
-
 # Loops through each container
-for container in containers:
+for i, container in enumerate(containers):
     song = container.find("h3", {"class": "c-title"}).text.strip()
     artist = container.find("span", {"class": "a-no-trucate"}).text.strip()
 
@@ -47,14 +45,12 @@ for container in containers:
 
     # Prints the chart position, song name, artist name, and related stats
     if print_data:
-        print(f"\nPosition: #{chart_position}")
+        print(f"\nPosition: #{i + 1}")
         print(f"Song: {song}")
         print(f"Artist: {artist}")
         print(f"Last Week: {last_week}")
         print(f"Peak Position: {peak_position}")
         print(f"Weeks on Chart: {weeks_on_chart}")
-
-    chart_position += 1
 
     f.write('\"' + song + '\",\"' + artist.replace("Featuring", "Feat.") +
             '\",' + last_week + ',' + peak_position + ',' + weeks_on_chart + '\n')
