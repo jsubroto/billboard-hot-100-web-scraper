@@ -47,12 +47,12 @@ for container in containers:
 
     # Prints the chart position, song name, artist name, and related stats
     if print_data:
-        print("\nPosition: #{}".format(chart_position))
-        print("Song: {}".format(song))
-        print("Artist: {}".format(artist))
-        print("Last Week: {}".format(last_week))
-        print("Peak Position: {}".format(peak_position))
-        print("Weeks on Chart: {}".format(weeks_on_chart))
+        print(f"\nPosition: #{chart_position}")
+        print(f"Song: {song}")
+        print(f"Artist: {artist}")
+        print(f"Last Week: {last_week}")
+        print(f"Peak Position: {peak_position}")
+        print(f"Weeks on Chart: {weeks_on_chart}")
 
     chart_position += 1
 
