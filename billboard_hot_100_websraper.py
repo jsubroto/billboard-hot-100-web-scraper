@@ -4,7 +4,6 @@ from bs4 import BeautifulSoup
 url = "https://www.billboard.com/charts/hot-100/"
 response = requests.get(url)
 
-# HTML parsing
 soup = BeautifulSoup(response.text, "html.parser")
 
 # Grabs all information related to the top 100 songs
@@ -20,7 +19,6 @@ f.write(headers)
 
 print("Welcome to Jaimes Subroto's Billboard Hot 100 Python Web Scraper!")
 
-# Asks the user if he/she wants the data to be printed to the console
 while True:
     print_data = input(
         "Would you like the data to be printed to the console? ")
@@ -35,7 +33,6 @@ while True:
     else:
         print("Sorry, I didn't get that.")
 
-# Loops through each container
 for i, container in enumerate(containers):
     song = container.find("h3", {"class": "c-title"}).text.strip()
     artist = container.find("span", {"class": "a-no-trucate"}).text.strip()
@@ -43,7 +40,6 @@ for i, container in enumerate(containers):
     last_week, peak_position, weeks_on_chart = container.find_all(
         "ul", {"class": "lrv-a-unstyle-list"})[-1].text.strip().split()
 
-    # Prints the chart position, song name, artist name, and related stats
     if print_data:
         print(f"\nPosition: #{i + 1}")
         print(f"Song: {song}")
