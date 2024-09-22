@@ -6,10 +6,6 @@ response = requests.get(url)
 
 soup = BeautifulSoup(response.text, "html.parser")
 
-# Grabs all information related to the top 100 songs
-list_class = "ul.o-chart-results-list-row"
-containers = soup.select(list_class)
-
 filename = "billboard_hot_100.csv"
 f = open(filename, 'w')  # w = write
 
@@ -33,7 +29,7 @@ while True:
     else:
         print("Sorry, I didn't get that.")
 
-for i, container in enumerate(containers):
+for i, container in enumerate(soup.select("ul.o-chart-results-list-row")):
     song = container.find("h3", {"class": "c-title"}).text.strip()
     artist = container.find("span", {"class": "a-no-trucate"}).text.strip()
 
