@@ -24,11 +24,11 @@ print("Welcome to Jaimes Subroto's Billboard Hot 100 Python Web Scraper!")
 while True:
     print_data = input(
         "Would you like the data to be printed to the console? ")
-    if print_data.lower() == "yes" or print_data.lower() == 'y':
+    if print_data.lower() in {"yes", 'y'}:
         print_data = True
         print("\nPrinting this week's HOTTEST 100 songs...")
         break
-    elif print_data.lower() == "no" or print_data.lower() == 'n':
+    elif print_data.lower() in {"no", 'n'}:
         print_data = False
         print("\nScraping this week's HOTTEST 100 songs...")
         break
