@@ -9,8 +9,8 @@ soup = BeautifulSoup(response.text, "html.parser")
 filename = "billboard_hot_100.csv"
 f = open(filename, 'w')  # w = write
 
-headers = "Song, Artist, Last Week, Peak Position, Weeks on Chart, Image URL\n"
-
+# Include Award in headers
+headers = "Image, Status, Song, Artist, Last Week, Peak Position, Weeks on Chart\n"
 f.write(headers)
 
 print("Welcome to Jaimes Subroto's Billboard Hot 100 Python Web Scraper!")
@@ -38,6 +38,15 @@ for i, container in enumerate(soup.select("ul.o-chart-results-list-row")):
     # Get the image URL from the img element
     image_url = container.find("img")["src"] if container.find("img") else "N/A"
 
+    # Attempt to get the award SVG
+    # award_svgs = container.find_all("svg")  # Replace with actual class or ID
+    # if (len(award_svgs) > 2):
+    #     award_svg_url = award_svgs[3] #award_svg["src"] if award_svg else "N/A"  # Modify based on actual SVG attributes
+    # else:
+    #     award_svg_url = "N/A"
+    status_svgs = container.find_all("svg")  # Replace with actual class or ID
+    status_svg_url = status_svgs[1] #award_svg["src"] if award_svg else "N/A"  # Modify based on actual SVG attributes
+
     if print_data:
         print(f"\nPosition: #{i + 1}")
         print(f"Song: {song}")
@@ -46,9 +55,11 @@ for i, container in enumerate(soup.select("ul.o-chart-results-list-row")):
         print(f"Peak Position: {peak_position}")
         print(f"Weeks on Chart: {weeks_on_chart}")
         print(f"Image URL: {image_url}")
+        print(f"Status SVG: {status_svg_url}")
 
-    # Write data including image URL to the CSV file
-    f.write(f'\"{image_url}\",\"{song}\",\"{artist.replace("Featuring", "Feat.")}\",{last_week},{peak_position},{weeks_on_chart}\n')
+    # Write data including image URL and Award SVG to the CSV file
+    f.write(f'\"{image_url}\",\"{status_svg_url}\",\"{song}\",\"{artist.replace("Featuring", "Feat.")}\",{last_week},{peak_position},\"{weeks_on_chart}\"\n')
+
 f.close()
 
 print("\nWeb scraped data saved to {}".format(filename))

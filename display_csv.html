@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSV File Viewer</title>
+  <style>
+    /* General body styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 40px 20px;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* Container styling */
+    .container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      max-width: 900px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Header styling */
+    h2 {
+      color: #4CAF50;
+      margin-bottom: 20px;
+      font-size: 2.5em;
+      font-weight: 600;
+    }
+
+    /* Status message styling */
+    #statusMessage {
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #666;
+    }
+
+    /* File input styling */
+    #fileInput {
+      display: none;
+    }
+
+    .file-input-label {
+      display: inline-block;
+      padding: 10px 25px;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 1em;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .file-input-label:hover {
+      background-color: #45a049;
+    }
+
+    /* Table styling */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+      transition: background-color 0.3s;
+    }
+
+    th {
+      background-color: #4CAF50;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+
+    /* Image styling */
+    img {
+      width: 180px; /* Set width */
+      height: 180px; /* Set height */
+      margin: 0; /* Remove margins */
+      display: block; /* Ensure no extra space below the image */
+      object-fit: cover; /* Maintain aspect ratio */
+    }
+
+    /* Responsive design for smaller screens */
+    @media (max-width: 600px) {
+      th, td {
+        padding: 10px;
+      }
+
+      h2 {
+        font-size: 1.8em;
+      }
+    }
+
+    /* Custom styles for index cell */
+    .c-label {
+      font-weight: bold;
+    }
+
+    .a-font-primary-bold-l {
+      font-family: Arial, sans-serif;
+      font-size: 2em;
+    }
+
+    .u-font-size-32 {
+      font-size: 32px;
+    }
+
+    .u-letter-spacing-0080 {
+      letter-spacing: 0.08em;
+    }
+
+    .index-cell {
+      background-color: #4CAF50; /* Background color for index cells */
+      color: white; /* Text color */
+      text-align: center; /* Center align text */
+      width: 50px; /* Set width */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>CSV File Viewer</h2>
+    <p id="statusMessage">Loading billboard_hot_100.csv...</p>
+    <label for="fileInput" class="file-input-label">Upload CSV File</label>
+    <input type="file" id="fileInput" accept=".csv" />
+    <table id="csvTable"></table>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  <script>
+    function loadCSVFile(url) {
+      fetch(url)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('File not found');
+          }
+          return response.text();
+        })
+        .then(csvText => {
+          const parsed = Papa.parse(csvText, {
+            header: false,
+            skipEmptyLines: true
+          });
+          displayCSV(parsed.data);
+          document.getElementById('statusMessage').textContent = 'billboard_hot_100.csv loaded successfully!';
+        })
+        .catch(error => {
+          console.error('Error loading file:', error);
+          document.getElementById('statusMessage').textContent = 'File not found. Please upload a CSV file.';
+          document.getElementById('fileInput').style.display = 'block';
+        });
+    }
+
+    function displayCSV(data) {
+      const table = document.getElementById('csvTable');
+      table.innerHTML = ''; // Clear any existing table content
+
+      data.forEach((row, index) => {
+        const tr = document.createElement('tr');
+
+        // Create the index cell for rows other than the header
+        if (index !== 0) { // Only for rows that are not the header
+          const indexCell = document.createElement('td');
+          indexCell.textContent = index; // Use the original index value (1-based)
+
+          // Apply the styles for the index cell
+          indexCell.classList.add('index-cell', 'c-label', 'a-font-primary-bold-l', 'u-font-size-32', 'u-letter-spacing-0080');
+
+          tr.appendChild(indexCell); // Append the index cell to the row
+        } else {
+          // If it's the header row, add an empty cell for alignment
+          const emptyCell = document.createElement('td');
+          emptyCell.style.backgroundColor = '#4CAF50'; // Set background color to #4CAF50
+          emptyCell.style.width = '50px'; // Set the width to match the index cell
+          tr.appendChild(emptyCell); // Append the empty cell to the row
+        }
+
+        row.forEach(cell => {
+          const td = document.createElement(index === 0 ? 'th' : 'td'); // First row is the header
+          if (cell.startsWith('http')) {
+            const img = document.createElement('img');
+            img.src = cell;
+            img.alt = cell;
+            img.style = "margin: -10px; width: 120px; height: 120px; object-fit: cover;";
+            td.appendChild(img);
+          } else if (cell.startsWith('<svg')) {
+            td.innerHTML = cell;
+          } else {
+            td.textContent = cell;
+          }
+          tr.appendChild(td);
+        });
+        table.appendChild(tr);
+      });
+    }
+
+    document.getElementById('fileInput').addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(event) {
+          const parsed = Papa.parse(event.target.result, {
+            header: false,
+            skipEmptyLines: true
+          });
+          displayCSV(parsed.data);
+          document.getElementById('statusMessage').textContent = file.name + ' loaded successfully!';
+        };
+        reader.readAsText(file);
+      }
+    });
+
+    // Attempt to load billboard_hot_100.csv on page load
+    loadCSVFile('billboard_hot_100.csv');
+  </script>
+
+</body>
+</html>
