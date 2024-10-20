@@ -58,6 +58,13 @@ If you're using Python 3.x, run:
 python -m http.server 8000
 
 ```
+If you're having cahcing issues (The data isn't updating) run:
+
+```bash
+
+python start_server.py
+
+```
 
 4. Access your HTML file in a browser by visiting:
 
