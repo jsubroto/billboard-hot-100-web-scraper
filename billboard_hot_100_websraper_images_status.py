@@ -44,8 +44,20 @@ for i, container in enumerate(soup.select("ul.o-chart-results-list-row")):
     #     award_svg_url = award_svgs[3] #award_svg["src"] if award_svg else "N/A"  # Modify based on actual SVG attributes
     # else:
     #     award_svg_url = "N/A"
-    status_svgs = container.find_all("svg")  # Replace with actual class or ID
-    status_svg_url = status_svgs[1] #award_svg["src"] if award_svg else "N/A"  # Modify based on actual SVG attributes
+    new_span = container.find_all("span", {"class": "u-background-color-yellow"})
+    # print(len(new_span))
+    if len(new_span) > 0:
+        # print(new_span[0].text.strip())
+        new_text = new_span[0].text.strip()
+        if new_text.endswith("ENTRY"):
+            new_text = "RE-ENTRY"
+            status_svg_url = f'<span style="font-family: \'Arial\', sans-serif; font-weight: bold; font-size: 0.8rem; color: #4a4a4a; background-color: #ffeb3b; text-align: center; padding: 10px">{new_text}</span>'
+        else:
+            status_svg_url = f'<span style="font-family: \'Arial\', sans-serif; font-weight: bold; font-size: 1.5rem; color: #4a4a4a; background-color: #ffeb3b; text-align: center; padding: 10px">{new_text}</span>'
+
+    else:
+        status_svgs = container.find_all("svg")  # Replace with actual class or ID
+        status_svg_url = status_svgs[1] #award_svg["src"] if award_svg else "N/A"  # Modify based on actual SVG attributes
 
     if print_data:
         print(f"\nPosition: #{i + 1}")
