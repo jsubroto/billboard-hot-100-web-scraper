@@ -61,7 +61,7 @@ for i, container in enumerate(soup.select("ul.o-chart-results-list-row")):
             status_svg = f'<span>{''.join(status.text.split())}</span>'
         else:
             status_svgs = container.find_all("svg")
-            status_svg = status_svgs[1]
+            status_svg = str(status_svgs[1])
 
     if print_data:
         print(f"\nPosition: #{i + 1}")
