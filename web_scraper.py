@@ -39,7 +39,7 @@ while True:
 filename = "billboard_hot_100.csv"
 f = open(filename, 'w')  # w = write
 
-headers = "Image, Status," if image_data else ''
+headers = "Image, Status, " if image_data else ''
 headers += "Song, Artist, Last Week, Peak Position, Weeks on Chart\n"
 
 f.write(headers)
