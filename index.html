@@ -85,9 +85,13 @@
       font-weight: bold;
     }
 
-    table tr:nth-child(2) td:not(:nth-child(-n+3)) {
+    table tr:nth-child(2) td:not(:first-child) {
       font-weight: bold;
       font-size: 1.2em;
+    }
+
+    table tr:nth-child(2) td:nth-child(3):not(:first-child) {
+      font-size: 1em;
     }
 
     img {
@@ -123,7 +127,7 @@
     }
 
     .svg-width {
-      width: 1.8em;
+      width: 2em;
       display: inline-block;
     }
   </style>
