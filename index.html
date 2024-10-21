@@ -110,6 +110,13 @@
       background-color: #4caf50;
       color: white;
     }
+
+    .status {
+      font-weight: bold;
+      color: #4a4a4a;
+      background-color: #ffeb3b;
+      padding: 4px;
+    }
   </style>
 </head>
 
@@ -167,8 +174,10 @@
             img.alt = cell;
             img.style = "margin: -10px; width: 120px; height: 120px; object-fit: cover;";
             td.appendChild(img);
-          } else if (cell.startsWith("<svg") || cell.startsWith("<span")) {
+          } else if (cell.startsWith("<svg")) {
             td.innerHTML = cell;
+          } else if (cell.startsWith("<span>")) {
+            td.innerHTML = "<div class='status'>" + cell + "</div>";
           } else {
             td.textContent = cell;
           }

@@ -1,11 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
 
-
-def get_status(size, new_text):
-    return f'<span style="font-family: \'Arial\', sans-serif; font-weight: bold; font-size: {size}rem; color: #4a4a4a; background-color: #ffeb3b; text-align: center; padding: 10px">{new_text}</span>'
-
-
 url = "https://www.billboard.com/charts/hot-100/"
 response = requests.get(url)
 
@@ -44,14 +39,10 @@ for i, container in enumerate(soup.select("ul.o-chart-results-list-row")):
     image_url = container.find(
         "img")["src"] if container.find("img") else "N/A"
 
-    new_status = container.find(
+    status = container.find(
         "span", {"class": "u-background-color-yellow"})
-    if new_status:
-        new_text = ''.join(new_status.text.split())
-        if new_text == "NEW":
-            status_svg = get_status(1.5, new_text)
-        else:
-            status_svg = get_status(0.8, new_text)
+    if status:
+        status_svg = f'<span>{''.join(status.text.split())}</span>'
     else:
         status_svgs = container.find_all("svg")
         status_svg = status_svgs[1]
