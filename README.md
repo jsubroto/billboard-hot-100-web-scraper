@@ -72,6 +72,6 @@ python start_server.py
 
 ```bash
 
-http://localhost:8000/display_csv.html
+http://localhost:8000/
 
 ```
