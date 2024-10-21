@@ -3,11 +3,11 @@
 
 Python application which web scrapes *[Billboard's Hot 100 Chart](https://www.billboard.com/charts/hot-100)* using **BeautifulSoup**. 
 
-The web scraped song informations are then stored to a .csv file named billboard\_hot\_100.csv.
+The web scraped song informations are then stored to a `.csv` file named `billboard_hot_100.csv`.
 
     filename = 'billboard_hot_100.csv'
 
-#### Generated `.csv` headers:
+### Generated `.csv` headers:
 * Image URL
 * Status SVG
 * Song name
