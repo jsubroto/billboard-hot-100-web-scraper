@@ -121,6 +121,11 @@
       background-color: #ffeb3b;
       padding: 4px;
     }
+
+    .svg-width {
+      width: 1.8em;
+      display: inline-block;
+    }
   </style>
 </head>
 
@@ -180,7 +185,7 @@
             img.style = "margin: -10px; width: 120px; height: 120px; object-fit: cover;";
             td.appendChild(img);
           } else if (cell.startsWith("<svg")) {
-            td.innerHTML = cell;
+            td.innerHTML = "<div class='svg-width'>" + cell + "</div>";
           } else if (cell.startsWith("<span>")) {
             td.innerHTML = "<div class='status'>" + cell + "</div>";
           } else {
