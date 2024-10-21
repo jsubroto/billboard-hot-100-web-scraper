@@ -177,17 +177,10 @@
       data.forEach((row, index) => {
         const tr = document.createElement('tr');
 
-        if (index !== 0) {
-          const indexCell = document.createElement('td');
-          indexCell.textContent = index;
-          indexCell.classList.add('index-cell', 'c-label', 'a-font-primary-bold-l', 'u-font-size-32', 'u-letter-spacing-0080');
-          tr.appendChild(indexCell);
-        } else {
-          const emptyCell = document.createElement('td');
-          emptyCell.style.backgroundColor = '#4CAF50';
-          emptyCell.style.width = '50px';
-          tr.appendChild(emptyCell);
-        }
+        const cell = document.createElement('td');
+        cell.classList.add('index-cell', 'c-label', 'a-font-primary-bold-l', 'u-font-size-32', 'u-letter-spacing-0080');
+        if (index !== 0) cell.textContent = index;
+        tr.appendChild(cell);
 
         row.forEach(cell => {
           const td = document.createElement(index === 0 ? 'th' : 'td');
