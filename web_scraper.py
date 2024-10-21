@@ -6,14 +6,20 @@ response = requests.get(url)
 
 soup = BeautifulSoup(response.text, "html.parser")
 
-filename = "billboard_hot_100.csv"
-f = open(filename, 'w')  # w = write
-
-headers = "Image, Status, Song, Artist, Last Week, Peak Position, Weeks on Chart\n"
-
-f.write(headers)
-
 print("Welcome to Jaimes Subroto's Billboard Hot 100 Python Web Scraper!")
+
+while True:
+    image_data = input(
+        "Would you like to scrape image and status data? ")
+    if image_data.lower() in {"yes", 'y'}:
+        image_data = True
+        break
+    elif image_data.lower() in {"no", 'n'}:
+        image_data = False
+        break
+    else:
+        print("Sorry, I didn't get that.")
+
 
 while True:
     print_data = input(
@@ -29,6 +35,15 @@ while True:
     else:
         print("Sorry, I didn't get that.")
 
+
+filename = "billboard_hot_100.csv"
+f = open(filename, 'w')  # w = write
+
+headers = "Image, Status," if image_data else ''
+headers += "Song, Artist, Last Week, Peak Position, Weeks on Chart\n"
+
+f.write(headers)
+
 for i, container in enumerate(soup.select("ul.o-chart-results-list-row")):
     song = container.find("h3", {"class": "c-title"}).text.strip()
     artist = container.find("span", {"class": "a-no-trucate"}).text.strip()
@@ -36,16 +51,17 @@ for i, container in enumerate(soup.select("ul.o-chart-results-list-row")):
     last_week, peak_position, weeks_on_chart = container.find_all(
         "ul", {"class": "lrv-a-unstyle-list"})[-1].text.strip().split()
 
-    image_url = container.find(
-        "img")["src"] if container.find("img") else "N/A"
+    if image_data:
+        image_url = container.find(
+            "img")["src"] if container.find("img") else "N/A"
 
-    status = container.find(
-        "span", {"class": "u-background-color-yellow"})
-    if status:
-        status_svg = f'<span>{''.join(status.text.split())}</span>'
-    else:
-        status_svgs = container.find_all("svg")
-        status_svg = status_svgs[1]
+        status = container.find(
+            "span", {"class": "u-background-color-yellow"})
+        if status:
+            status_svg = f'<span>{''.join(status.text.split())}</span>'
+        else:
+            status_svgs = container.find_all("svg")
+            status_svg = status_svgs[1]
 
     if print_data:
         print(f"\nPosition: #{i + 1}")
@@ -55,8 +71,10 @@ for i, container in enumerate(soup.select("ul.o-chart-results-list-row")):
         print(f"Peak Position: {peak_position}")
         print(f"Weeks on Chart: {weeks_on_chart}")
 
-    f.write(f'\"{image_url}\",\"{status_svg}\",\"{song}\",\"{artist.replace(
-        "Featuring", "Feat.")}\",{last_week},{peak_position},\"{weeks_on_chart}\"\n')
+    if image_data:
+        f.write(f'\"{image_url}\",\"{status_svg}\",')
+    f.write(f'\"{song}\",\"{artist.replace("Featuring", "Feat.")}\",{
+            last_week},{peak_position},\"{weeks_on_chart}\"\n')
 
 f.close()
 
