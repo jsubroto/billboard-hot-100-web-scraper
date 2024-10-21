@@ -41,7 +41,7 @@
     #statusMessage {
       font-weight: bold;
       margin-bottom: 20px;
-      color: #666;
+      color: #808080;
     }
 
     #fileInput {
@@ -51,7 +51,7 @@
     .file-input-label {
       display: inline-block;
       padding: 10px 25px;
-      background-color: #4CAF50;
+      background-color: #4caf50;
       color: white;
       font-size: 1em;
       border-radius: 5px;
@@ -64,7 +64,6 @@
     }
 
     table {
-      width: 100%;
       border-collapse: collapse;
       margin-top: 20px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -78,23 +77,17 @@
       padding: 15px;
       text-align: center;
       border-bottom: 1px solid #ddd;
-      transition: background-color 0.3s;
     }
 
     th {
-      background-color: #4CAF50;
+      background-color: #4caf50;
       color: white;
       text-transform: uppercase;
       font-weight: bold;
     }
 
-
     img {
-      width: 180px;
-      height: 180px;
-      margin: 0;
       display: block;
-      object-fit: cover;
     }
 
     @media (max-width: 600px) {
@@ -114,7 +107,7 @@
       font-weight: bold;
       letter-spacing: 0.08em;
       text-align: center;
-      background-color: #4CAF50;
+      background-color: #4caf50;
       color: white;
     }
   </style>
@@ -146,12 +139,11 @@
             skipEmptyLines: true
           });
           displayCSV(parsed.data);
-          document.getElementById('statusMessage').textContent = 'billboard_hot_100.csv loaded successfully!';
+          document.getElementById('statusMessage').textContent = '';
         })
         .catch(error => {
           console.error('Error loading file:', error);
           document.getElementById('statusMessage').textContent = 'File not found. Please upload a CSV file.';
-          document.getElementById('fileInput').style.display = 'block';
         });
     }
 
@@ -175,9 +167,7 @@
             img.alt = cell;
             img.style = "margin: -10px; width: 120px; height: 120px; object-fit: cover;";
             td.appendChild(img);
-          } else if (cell.startsWith('<svg')) {
-            td.innerHTML = cell;
-          } else if (cell.startsWith('<span')) {
+          } else if (cell.startsWith("<svg") || cell.startsWith("<span")) {
             td.innerHTML = cell;
           } else {
             td.textContent = cell;
