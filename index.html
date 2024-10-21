@@ -193,7 +193,19 @@
           } else if (cell.startsWith("<span>")) {
             td.innerHTML = "<div class='status'>" + cell + "</div>";
           } else {
-            td.textContent = cell;
+            switch (cell) {
+              case "right":
+                td.innerHTML = '<svg style="width: 100 %; height:auto" viewbox="0 0 26.191 26.191" xmlns="http://www.w3.org/2000/svg"><g data-name="Group 3" transform="translate(-626 -1915)"><circle cx="13.095" cy="13.095" data-name="Ellipse 494" fill="#8289a1" r="13.095" transform="translate(626 1915)"></circle><path d="M642.771 1928.989h-10.77v-1.82h10.77l-4.746-4.882 1.251-1.287 6.882 7.079-6.882 7.079-1.251-1.288z" fill="#fff"></path></g></svg>'
+                break;
+              case "up":
+                td.innerHTML = '<svg style="width: 100 %; height:auto" viewbox="0 0 26.191 26.191" xmlns="http://www.w3.org/2000/svg"><g data-name="Group 7170" transform="translate(-626 -1965.469)"><circle cx="13.095" cy="13.095" data-name="Ellipse 494" fill="#448118" r="13.095" transform="translate(626 1965.469)"></circle><path d="M639.989 1975.227v10.77h-1.82v-10.77l-4.882 4.746-1.287-1.251 7.079-6.882 7.079 6.882-1.288 1.251z" fill="#fff"></path></g></svg>'
+                break;
+              case "down":
+                td.innerHTML = '<svg style="width: 100 %; height:auto" viewbox="0 0 26.191 26.191" xmlns="http://www.w3.org/2000/svg"><g data-name="Group 7171"><g data-name="final red"><circle cx="13.095" cy="13.095" data-name="Ellipse 494" fill="#b91b20" r="13.095"></circle></g><path d="M12.167 17.141V6.371h1.82v10.77l4.882-4.746 1.287 1.251-7.079 6.882-7.079-6.882 1.288-1.251z" fill="#fff"></path></g></svg>'
+                break;
+              default:
+                td.textContent = cell;
+            }
           }
           tr.appendChild(td);
         });

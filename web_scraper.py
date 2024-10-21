@@ -62,6 +62,12 @@ for i, container in enumerate(soup.select("ul.o-chart-results-list-row")):
         else:
             status_svgs = container.find_all("svg")
             status_svg = str(status_svgs[1])
+            if "Group 3" in status_svg:
+                status_svg = "right"
+            elif "Group 7170" in status_svg:
+                status_svg = "up"
+            elif "Group 7171" in status_svg:
+                status_svg = "down"
 
     if print_data:
         print(f"\nPosition: #{i + 1}")
