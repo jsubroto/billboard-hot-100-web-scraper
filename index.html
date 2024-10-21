@@ -109,28 +109,13 @@
       }
     }
 
-    .c-label {
-      font-weight: bold;
-    }
-
-    .a-font-primary-bold-l {
-      font-family: Arial, sans-serif;
-      font-size: 2em;
-    }
-
-    .u-font-size-32 {
-      font-size: 32px;
-    }
-
-    .u-letter-spacing-0080 {
-      letter-spacing: 0.08em;
-    }
-
     .index-cell {
+      font-size: 2em;
+      font-weight: bold;
+      letter-spacing: 0.08em;
+      text-align: center;
       background-color: #4CAF50;
       color: white;
-      text-align: center;
-      width: 50px;
     }
   </style>
 </head>
@@ -177,10 +162,10 @@
       data.forEach((row, index) => {
         const tr = document.createElement('tr');
 
-        const cell = document.createElement('td');
-        cell.classList.add('index-cell', 'c-label', 'a-font-primary-bold-l', 'u-font-size-32', 'u-letter-spacing-0080');
-        if (index !== 0) cell.textContent = index;
-        tr.appendChild(cell);
+        const indexCell = document.createElement('td');
+        indexCell.classList.add('index-cell');
+        if (index !== 0) indexCell.textContent = index;
+        tr.appendChild(indexCell);
 
         row.forEach(cell => {
           const td = document.createElement(index === 0 ? 'th' : 'td');
