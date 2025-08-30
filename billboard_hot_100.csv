@@ -1,101 +1,101 @@
-Image, Status, Song, Artist, Last Week, Peak Position, Weeks on Chart
-"https://charts-static.billboard.com/img/2024/04/shaboozey-acf-abarsongtipsy-bat-180x180.jpg","right","A Bar Song (Tipsy)","Shaboozey",1,1,"26"
-"https://charts-static.billboard.com/img/2017/02/billie-eilish-lrt-180x180.jpg","right","Birds Of A Feather","Billie Eilish",2,2,"21"
-"https://charts-static.billboard.com/img/2024/05/post-malone-uhe-ihadsomehelp-4uo-180x180.jpg","up","I Had Some Help","Post Malone Feat. Morgan Wallen",4,1,"22"
-"https://charts-static.billboard.com/img/2024/04/sabrina-carpenter-3b3-espresso-c1a-180x180.jpg","up","Espresso","Sabrina Carpenter",5,3,"26"
-"https://charts-static.billboard.com/img/2024/08/lady-gaga-b8x-diewithasmile-6og-180x180.jpg","up","Die With A Smile","Lady Gaga & Bruno Mars",6,3,"8"
-"https://charts-static.billboard.com/img/2024/04/chappellroan-bhw-goodluckbabe-yrt-180x180.jpg","up","Good Luck, Babe!","Chappell Roan",7,4,"27"
-"https://charts-static.billboard.com/img/2014/06/sabrina-carpenter-3b3-180x180.jpg","up","Taste","Sabrina Carpenter",9,2,"7"
-"https://charts-static.billboard.com/img/2023/07/teddyswims-vot-losecontrol-4kx-180x180.jpg","right","Lose Control","Teddy Swims",8,1,"61"
-"https://charts-static.billboard.com/img/2024/06/sabrina-carpenter-3b3-pleasepleaseplease-i9t-180x180.jpg","up","Please Please Please","Sabrina Carpenter",10,1,"18"
-"https://charts-static.billboard.com/img/2024/02/bensonboone-a8a-beautifulthings-vvt-180x180.jpg","up","Beautiful Things","Benson Boone",12,2,"38"
-"https://charts-static.billboard.com/img/2024/05/kendrick-lamar-atc-notlikeus-fyp-180x180.jpg","right","Not Like Us","Kendrick Lamar",11,1,"23"
-"https://charts-static.billboard.com/img/2024/10/the-weeknd-jlk-timeless-ait-180x180.jpg","down","Timeless","The Weeknd & Playboi Carti",3,3,"2"
-"https://charts-static.billboard.com/img/2013/10/hozier-7va-180x180.jpg","right","Too Sweet","Hozier",13,1,"29"
-"https://charts-static.billboard.com/img/2024/05/tommyrichman-vhu-milliondollarbaby-kpl-180x180.jpg","right","Million Dollar Baby","Tommy Richman",14,2,"24"
-"https://charts-static.billboard.com/img/2024/05/chappellroan-bhw-hottogo-8dx-180x180.jpg","right","Hot To Go!","Chappell Roan",15,15,"19"
-"https://charts-static.billboard.com/img/2024/07/morgan-wallen-dqx-lieslieslies-otk-180x180.jpg","right","Lies Lies Lies","Morgan Wallen",16,7,"14"
-"https://charts-static.billboard.com/img/2024/06/jelly-roll-z4p-iamnotokay-zvd-180x180.jpg","up","I Am Not Okay","Jelly Roll",18,17,"17"
-"https://charts-static.billboard.com/img/2024/05/marshmello-fo3-milesonit-gf9-180x180.jpg","up","Miles On It","Marshmello & Kane Brown",19,15,"23"
-"https://charts-static.billboard.com/img/2024/05/luke-combs-735-aintnoloveinoklahoma-c6a-180x180.jpg","down","Ain't No Love In Oklahoma","Luke Combs",17,13,"21"
-"https://charts-static.billboard.com/img/2023/03/morgan-wallen-dqx-cowgirls-myb-180x180.jpg","up","Cowgirls","Morgan Wallen Feat. ERNEST",22,12,"43"
-"https://charts-static.billboard.com/img/2014/06/sabrina-carpenter-3b3-180x180.jpg","right","Bed Chem","Sabrina Carpenter",21,14,"7"
-"https://charts-static.billboard.com/img/2024/03/dasha-3tu-austin-6a3-180x180.jpg","down","Austin","Dasha",20,18,"31"
-"https://charts-static.billboard.com/img/2024/06/zachbryan-de1-pinkskies-qx3-180x180.jpg","right","Pink Skies","Zach Bryan",23,6,"20"
-"https://charts-static.billboard.com/img/2023/11/teddyswims-vot-thedoor-ud5-180x180.jpg","right","The Door","Teddy Swims",24,24,"19"
-"https://charts-static.billboard.com/img/2024/07/ji-min-7g4-who-w0p-180x180.jpg","up","Who","Jimin",26,12,"12"
-"https://charts-static.billboard.com/img/2024/06/jordanadetunji-vl3-kehlani-oq4-180x180.jpg","down","Kehlani","Jordan Adetunji",25,24,"16"
-"https://charts-static.billboard.com/img/2024/05/mylessmith-000-stargazing-35e-180x180.jpg","up","Stargazing","Myles Smith",34,27,"22"
-"https://charts-static.billboard.com/img/2017/02/billie-eilish-lrt-180x180.jpg","up","Wildflower","Billie Eilish",35,17,"21"
-"https://charts-static.billboard.com/img/2024/07/post-malone-uhe-pourmeadrink-cdz-180x180.jpg","right","Pour Me A Drink","Post Malone Feat. Blake Shelton",29,12,"16"
-"https://charts-static.billboard.com/img/2024/06/ellalangley-000-youlooklikeyouloveme-vtu-180x180.jpg","up","You Look Like You Love Me","Ella Langley Feat. Riley Green",33,30,"16"
-"https://charts-static.billboard.com/img/2020/10/gracie-abrams-wqa-180x180.jpg","up","I Love You, I'm Sorry","Gracie Abrams",53,31,"10"
-"https://charts-static.billboard.com/img/2024/07/glorilla-bn2-tgif-0z9-180x180.jpg","down","TGIF","GloRilla",28,28,"16"
-"https://charts-static.billboard.com/img/2024/08/gigiperez-iqu-sailorsong-x36-180x180.jpg","up","Sailor Song","Gigi Perez",45,33,"8"
-"https://charts-static.billboard.com/img/2024/04/taylor-swift-9sy-icandoitwithabrokenheart-o50-180x180.jpg","down","I Can Do It With A Broken Heart","Taylor Swift",27,3,"25"
-"https://charts-static.billboard.com/img/2024/03/sza-xyh-saturn-9z7-180x180.jpg","down","Saturn","SZA",32,6,"33"
-"https://charts-static.billboard.com/img/2024/09/tatemcrae-rxu-itsokimok-dr7-180x180.jpg","down","It's Ok I'm Ok","Tate McRae",30,20,"4"
-"https://charts-static.billboard.com/img/2024/06/chappellroan-bhw-pinkponyclub-14t-180x180.jpg","down","Pink Pony Club","Chappell Roan",31,26,"17"
-"https://charts-static.billboard.com/img/1988/03/future-zn2-180x180.jpg","down","Like That","Future, Metro Boomin & Kendrick Lamar",36,1,"29"
-"https://charts-static.billboard.com/img/2024/06/karol-g-7vn-siantestehubieraconocido-0ut-180x180.jpg","down","Si Antes Te Hubiera Conocido","Karol G",38,32,"16"
-"https://charts-static.billboard.com/img/2024/06/koe-wetzel-n6g-highroad-769-180x180.jpg","up","High Road","Koe Wetzel & Jessie Murph",43,22,"18"
-"https://charts-static.billboard.com/img/2024/09/the-weeknd-jlk-dancingintheflames-nx1-180x180.jpg","down","Dancing In The Flames","The Weeknd",37,14,"4"
-"https://charts-static.billboard.com/img/2019/09/zachbryan-de1-180x180.jpg","down","28","Zach Bryan",40,14,"14"
-"https://charts-static.billboard.com/img/2024/04/tuckerwetmore-5kz-windupmissinyou-2rn-180x180.jpg","up","Wind Up Missin' You","Tucker Wetmore",64,43,"28"
-"https://charts-static.billboard.com/img/2014/06/sabrina-carpenter-3b3-180x180.jpg","down","Good Graces","Sabrina Carpenter",41,15,"7"
-"https://charts-static.billboard.com/img/2014/06/sabrina-carpenter-3b3-180x180.jpg","up","Juno","Sabrina Carpenter",47,22,"7"
-"https://charts-static.billboard.com/img/2024/04/bensonboone-a8a-slowitdown-zc9-180x180.jpg","right","Slow It Down","Benson Boone",46,32,"29"
-"https://charts-static.billboard.com/img/2022/04/pesopluma-2yo-180x180.jpg","up","La Patrulla","Peso Pluma & Neton Vega",48,47,"12"
-"https://charts-static.billboard.com/img/2019/01/megan-thee-stallion-dkc-180x180.jpg","up","Mamushi","Megan Thee Stallion Feat. Yuki Chiba",54,36,"15"
-"https://charts-static.billboard.com/img/2024/04/luke-bryan-zck-loveyoumissyoumeanit-edi-180x180.jpg","down","Love You, Miss You, Mean It","Luke Bryan",39,39,"10"
-"https://charts-static.billboard.com/img/2024/05/charli-xcx-3qe-360-37u-180x180.jpg","up","360","Charli xcx",51,41,"18"
-"https://charts-static.billboard.com/img/2022/04/pesopluma-2yo-180x180.jpg","up","Dos Dias","Tito Double P & Peso Pluma",61,51,"5"
-"https://charts-static.billboard.com/img/2024/09/nlechoppa-afk-orwhatX-3o4-180x180.jpg","up","Or What?","NLE Choppa & 41",91,52,"2"
-"https://charts-static.billboard.com/img/2024/07/realbostonrichey-4gx-helpme-cv6-180x180.jpg","up","Help Me","Real Boston Richey",56,53,"12"
-"https://charts-static.billboard.com/img/2024/09/addisonrae-xms-dietpepsi-yc0-180x180.jpg","up","Diet Pepsi","Addison Rae",70,54,"5"
-"https://charts-static.billboard.com/img/2024/08/hanumankind-000-bigdawgs-iuv-180x180.jpg","down","Big Dawgs","Hanumankind X Kalmi",50,23,"11"
-"https://charts-static.billboard.com/img/2024/05/thomas-rhett-d1j-beautifulasyou-e0m-180x180.jpg","down","Beautiful As You","Thomas Rhett",52,52,"18"
-"https://charts-static.billboard.com/img/2017/03/moneybagg-yo-1uf-180x180.jpg","right","Whiskey Whiskey","Moneybagg Yo Feat. Morgan Wallen",57,21,"17"
-"https://charts-static.billboard.com/img/2024/06/eminem-6zg-houdini-8j5-180x180.jpg","up","Houdini","Eminem",59,2,"19"
-"https://charts-static.billboard.com/img/2024/06/charli-xcx-3qe-guess-uv3-180x180.jpg","up","Guess","Charli xcx Feat. Billie Eilish",60,12,"10"
-"https://charts-static.billboard.com/img/2024/08/mgk-ohm-lonelyroad-4g6-180x180.jpg","up","Lonely Road","mgk & Jelly Roll",67,33,"11"
-"https://charts-static.billboard.com/img/2024/08/post-malone-uhe-guyforthat-dky-180x180.jpg","down","Guy For That","Post Malone Feat. Luke Combs",44,17,"11"
-"https://charts-static.billboard.com/img/2020/02/the-kid-laroi-qev-180x180.jpg","up","Nights Like This","The Kid LAROI",63,47,"16"
-"https://charts-static.billboard.com/img/2024/07/meganmoroney-bnc-amiokayX-wr9-180x180.jpg","up","Am I Okay?","Megan Moroney",77,63,"9"
-"https://charts-static.billboard.com/img/1988/03/future-zn2-180x180.jpg","down","Lil Demon","Future",49,25,"3"
-"https://charts-static.billboard.com/img/2024/10/cody-johnson-dkq-imgonnaloveyou-5gl-180x180.jpg","down","I'm Gonna Love You","Cody Johnson & Carrie Underwood",42,42,"2"
-"https://charts-static.billboard.com/img/2024/06/bossmandlow-000-shakedatasstwerksong-ocj-180x180.jpg","up","Shake Dat Ass (Twerk Song)","BossMan Dlow",75,66,"5"
-"https://charts-static.billboard.com/img/2024/04/chappellroan-bhw-redwinesupernova-9dp-180x180.jpg","down","Red Wine Supernova","Chappell Roan",66,41,"19"
-"https://charts-static.billboard.com/img/2024/01/zachtop-znv-180x180.jpg","up","I Never Lie","Zach Top",78,68,"3"
-"https://charts-static.billboard.com/img/2023/09/chris-stapleton-gzh-ithinkiminlovewithyou-99q-180x180.jpg","up","Think I'm In Love With You","Chris Stapleton",71,49,"23"
-"https://charts-static.billboard.com/img/2024/10/alexwarren-1ap-burningdown-j93-180x180.jpg","down","Burning Down","Alex Warren",69,69,"3"
-"https://charts-static.billboard.com/img/2016/08/21-savage-iy5-180x180.jpg","up","Prove It","21 Savage & Summer Walker",81,43,"14"
-"https://charts-static.billboard.com/img/2018/06/fuerzaregida-o2t-180x180.jpg","up","Nel","Fuerza Regida",76,70,"11"
-"https://charts-static.billboard.com/img/2000/09/linkin-park-wbk-180x180.jpg","down","The Emptiness Machine","Linkin Park",58,21,"5"
-"https://charts-static.billboard.com/img/1988/03/future-zn2-180x180.jpg","down","Too Fast","Future",65,23,"3"
-"https://charts-static.billboard.com/img/2005/07/chris-brown-94g-180x180.jpg","up","Residuals","Chris Brown",85,75,"6"
-"https://charts-static.billboard.com/img/2024/06/chappellroan-bhw-casual-xmi-180x180.jpg","down","Casual","Chappell Roan",74,59,"16"
-"https://charts-static.billboard.com/img/2024/09/titodoublep-000-ellokeron-zz5-180x180.jpg","up","El Lokeron","Tito Double P",92,77,"2"
-"https://charts-static.billboard.com/img/2024/04/markambor-3re-belongtogether-qu4-180x180.jpg","up","Belong Together","Mark Ambor",86,74,"23"
-"https://charts-static.billboard.com/img/1988/03/future-zn2-180x180.jpg","down","Plutoski","Future",62,29,"3"
-"https://charts-static.billboard.com/img/2017/02/billie-eilish-lrt-180x180.jpg","right","Chihiro","Billie Eilish",80,12,"20"
-"https://charts-static.billboard.com/img/2018/09/the-marias-mjs-180x180.jpg","up","No One Noticed","The Marias",90,81,"2"
-"https://charts-static.billboard.com/img/1988/03/future-zn2-180x180.jpg","down","Teflon Don","Future",55,21,"3"
-"https://charts-static.billboard.com/img/2012/06/charli-xcx-3qe-180x180.jpg","up","Apple","Charli xcx",84,51,"12"
-"https://charts-static.billboard.com/img/2024/10/ksi-z67-thickofit-743-180x180.jpg","<span>NEW</span>","Thick Of It","KSI Feat. Trippie Redd",-,84,"1"
-"https://charts-static.billboard.com/img/2022/05/glorilla-bn2-180x180.jpg","up","Hollon","GloRilla",95,85,"3"
-"https://charts-static.billboard.com/img/2024/08/jelly-roll-z4p-liar-cer-180x180.jpg","up","Liar","Jelly Roll",93,86,"3"
-"https://charts-static.billboard.com/img/2024/09/coldplay-bm3-wepray-utn-180x180.jpg","<span>NEW</span>","We Pray","Coldplay Feat. Little Simz, Burna Boy, Elyanna & TINI",-,87,"1"
-"https://charts-static.billboard.com/img/2021/12/natesmith-tuf-180x180.jpg","<span>NEW</span>","Fix What You Didn't Break","Nate Smith",-,88,"1"
-"https://charts-static.billboard.com/img/2014/06/sabrina-carpenter-3b3-180x180.jpg","down","Coincidence","Sabrina Carpenter",83,26,"7"
-"https://charts-static.billboard.com/img/2020/10/gracie-abrams-wqa-180x180.jpg","up","Close To You","Gracie Abrams",99,49,"10"
-"https://charts-static.billboard.com/img/2014/06/sabrina-carpenter-3b3-180x180.jpg","down","Sharpest Tool","Sabrina Carpenter",87,21,"7"
-"https://charts-static.billboard.com/img/2023/12/dustin-lynch-xmu-chevrolet-z02-180x180.jpg","up","Chevrolet","Dustin Lynch Feat. Jelly Roll",94,50,"17"
-"https://charts-static.billboard.com/img/2017/09/riley-green-btc-180x180.jpg","<span>RE-ENTRY</span>","Worst Way","Riley Green",-,93,"2"
-"https://charts-static.billboard.com/img/1988/03/future-zn2-180x180.jpg","down","Ski","Future",73,26,"3"
-"https://charts-static.billboard.com/img/2019/12/dontoliver-eav-180x180.jpg","<span>NEW</span>","New Drop","Don Toliver",-,95,"1"
-"https://charts-static.billboard.com/img/2023/11/justin-moore-zy0-thisismydirt-dz4-180x180.jpg","up","This Is My Dirt","Justin Moore",98,96,"2"
-"https://charts-static.billboard.com/img/2024/10/rodwave-qt2-fallfastinlove-3we-180x180.jpg","down","Fall Fast In Love","Rod Wave",68,68,"2"
-"https://charts-static.billboard.com/img/2024/03/baileyzimmerman-qt3-holysmokes-q2c-180x180.jpg","<span>RE-ENTRY</span>","Holy Smokes","Bailey Zimmerman",-,54,"6"
-"https://charts-static.billboard.com/img/2024/09/playboi-carti-ca2-allred-ccl-180x180.jpg","down","All Red","Playboi Carti",72,15,"4"
-"https://charts-static.billboard.com/img/2024/09/rodwave-qt2-passportjunkie-vf1-180x180.jpg","down","Passport Junkie","Rod Wave",97,61,"4"
+Image,Song,Artist,Last Week,Peak Position,Weeks on Chart
+https://charts-static.billboard.com/img/2025/07/huntrxejaeaudreynunareiami-o2t-golden-ozh-180x180.jpg,Golden,"HUNTR/X: EJAE, Audrey Nuna & REI AMI",2,1,9
+https://charts-static.billboard.com/img/2025/02/alexwarren-vcb-ordinary-jb8-180x180.jpg,Ordinary,Alex Warren,1,1,28
+https://charts-static.billboard.com/img/2016/08/morgan-wallen-z1m-180x180.jpg,What I Want,Morgan Wallen Feat. Tate McRae,3,1,14
+https://www.billboard.com/wp-content/themes/vip/pmc-billboard-2021/assets/public/lazyload-fallback.gif,Your Idol,"Saja Boys: Andrew Choi, Neckwav, Danny Chung, Kevin Woo & samUIL Lee",4,4,9
+https://www.billboard.com/wp-content/themes/vip/pmc-billboard-2021/assets/public/lazyload-fallback.gif,Soda Pop,"Saja Boys: Andrew Choi, Neckwav, Danny Chung, Kevin Woo & samUIL Lee",10,5,8
+https://charts-static.billboard.com/img/2025/01/ravynlenae-qqs-lovemenot-et7-180x180.jpg,Love Me Not,Ravyn Lenae,5,5,21
+https://charts-static.billboard.com/img/2023/07/teddyswims-vl5-losecontrol-4kx-180x180.jpg,Lose Control,Teddy Swims,7,1,105
+https://www.billboard.com/wp-content/themes/vip/pmc-billboard-2021/assets/public/lazyload-fallback.gif,Daisies,Justin Bieber,6,2,6
+https://charts-static.billboard.com/img/2025/04/morgan-wallen-eos-justincase-eos-180x180.jpg,Just In Case,Morgan Wallen,8,2,22
+https://www.billboard.com/wp-content/themes/vip/pmc-billboard-2021/assets/public/lazyload-fallback.gif,How It's Done,"HUNTR/X: EJAE, Audrey Nuna & REI AMI",14,10,8
+https://charts-static.billboard.com/img/2024/08/lady-gaga-p9u-diewithasmile-6og-180x180.jpg,Die With A Smile,Lady Gaga & Bruno Mars,12,1,53
+https://charts-static.billboard.com/img/2024/11/shaboozey-2wm-goodnews-c3j-180x180.jpg,Good News,Shaboozey,13,12,39
+https://charts-static.billboard.com/img/2024/04/shaboozey-2wm-abarsongtipsy-bat-180x180.jpg,A Bar Song (Tipsy),Shaboozey,9,1,71
+https://charts-static.billboard.com/img/2025/06/sabrina-carpenter-l0r-manchild-cmz-180x180.jpg,Manchild,Sabrina Carpenter,15,1,11
+https://charts-static.billboard.com/img/2024/10/leonthomas-y3w-mutt-ch5-180x180.jpg,Mutt,Leon Thomas,17,12,29
+https://charts-static.billboard.com/img/2025/02/morgan-wallen-eos-imtheproblem-wfr-180x180.jpg,I'm The Problem,Morgan Wallen,11,2,29
+https://charts-static.billboard.com/img/2024/02/bensonboone-o55-beautifulthings-vvt-180x180.jpg,Beautiful Things,Benson Boone,20,2,82
+https://charts-static.billboard.com/img/2024/06/chappellroan-2d8-pinkponyclub-14t-180x180.jpg,Pink Pony Club,Chappell Roan,18,4,62
+https://charts-static.billboard.com/img/2025/05/morgan-wallen-eos-igotbetter-8s9-180x180.jpg,I Got Better,Morgan Wallen,22,7,14
+https://www.billboard.com/wp-content/themes/vip/pmc-billboard-2021/assets/public/lazyload-fallback.gif,What It Sounds Like,"HUNTR/X: EJAE, Audrey Nuna & REI AMI",24,20,8
+https://www.billboard.com/wp-content/themes/vip/pmc-billboard-2021/assets/public/lazyload-fallback.gif,Luther,Kendrick Lamar & SZA,19,1,39
+https://charts-static.billboard.com/img/2024/06/billie-eilish-wnf-birdsofafeather-7iy-180x180.jpg,Birds Of A Feather,Billie Eilish,23,2,66
+https://www.billboard.com/wp-content/themes/vip/pmc-billboard-2021/assets/public/lazyload-fallback.gif,Free,"Rumi, JINU, EJAE & Andrew Choi",25,23,8
+https://charts-static.billboard.com/img/2024/05/post-malone-uhe-ihadsomehelp-1sg-180x180.jpg,I Had Some Help,Post Malone Feat. Morgan Wallen,21,1,67
+https://www.billboard.com/wp-content/themes/vip/pmc-billboard-2021/assets/public/lazyload-fallback.gif,Takedown,"HUNTR/X: EJAE, Audrey Nuna & REI AMI",26,25,8
+https://charts-static.billboard.com/img/2025/03/bensonboone-o55-sorryimhereforsomeoneelse-k1x-180x180.jpg,Sorry I'm Here For Someone Else,Benson Boone,29,19,25
+https://charts-static.billboard.com/img/2025/04/sombr-kpn-undressed-en9-180x180.jpg,Undressed,sombr,30,25,20
+https://charts-static.billboard.com/img/2025/08/chappellroan-2d8-thesubway-gy8-180x180.jpg,The Subway,Chappell Roan,16,3,3
+https://www.billboard.com/wp-content/themes/vip/pmc-billboard-2021/assets/public/lazyload-fallback.gif,Yukon,Justin Bieber,27,17,6
+https://charts-static.billboard.com/img/2021/10/bensonboone-941-180x180.jpg,Mystical Magical,Benson Boone,28,17,17
+https://charts-static.billboard.com/img/2025/02/sombr-kpn-backtofriends-xkb-180x180.jpg,Back To Friends,sombr,32,30,21
+https://charts-static.billboard.com/img/2025/08/chris-brown-t69-itdepends-6sf-180x180.jpg,It Depends,Chris Brown Feat. Bryson Tiller,33,32,4
+https://charts-static.billboard.com/img/2025/04/bigxthaplug-b0q-alltheway-z2y-180x180.jpg,All The Way,BigXthaPlug Feat. Bailey Zimmerman,34,4,20
+https://charts-static.billboard.com/img/2025/05/baileyzimmerman-8gx-backupplan-4g8-180x180.jpg,Backup Plan,Bailey Zimmerman & Luke Combs,31,31,16
+https://charts-static.billboard.com/img/2025/06/kehlani-48p-folded-beh-180x180.jpg,Folded,Kehlani,42,35,10
+https://charts-static.billboard.com/img/2025/05/mariahthescientist-d3c-burningblue-pst-180x180.jpg,Burning Blue,Mariah the Scientist,38,25,16
+https://charts-static.billboard.com/img/2025/04/jessiemurph-my0-bluestrips-aqv-180x180.jpg,Blue Strips,jessie murph,36,15,19
+https://www.billboard.com/wp-content/themes/vip/pmc-billboard-2021/assets/public/lazyload-fallback.gif,30 For 30,SZA With Kendrick Lamar,37,10,35
+https://charts-static.billboard.com/img/2025/02/thomas-rhett-sbw-afterallthebarsareclosed-ib6-180x180.jpg,After All The Bars Are Closed,Thomas Rhett,35,35,17
+https://charts-static.billboard.com/img/2025/03/russell-dickerson-4oy-happentome-tcj-180x180.jpg,Happen To Me,Russell Dickerson,39,39,18
+https://charts-static.billboard.com/img/2024/04/riley-green-flo-worstway-56i-180x180.jpg,Worst Way,Riley Green,40,20,32
+https://charts-static.billboard.com/img/2024/10/rose-y0t-apt-kne-180x180.jpg,APT.,ROSE & Bruno Mars,41,3,44
+https://charts-static.billboard.com/img/2025/04/jordan-davis-wxd-barnone-djc-180x180.jpg,Bar None,Jordan Davis,71,43,7
+https://charts-static.billboard.com/img/2024/11/morgan-wallen-eos-lovesomebody-a74-180x180.jpg,Love Somebody,Morgan Wallen,44,1,44
+https://charts-static.billboard.com/img/2025/07/drake-bg5-whatdidimissX-fvw-180x180.jpg,What Did I Miss?,Drake,43,2,7
+https://charts-static.billboard.com/img/2009/04/drake-bg5-180x180.jpg,Nokia,Drake,45,2,27
+https://charts-static.billboard.com/img/2025/08/luke-combs-vjy-backinthesaddle-8bn-180x180.jpg,Back In The Saddle,Luke Combs,47,38,4
+https://charts-static.billboard.com/img/2025/05/scotty-mccreery-3w0-bottlerockets-fda-180x180.jpg,Bottle Rockets,Scotty McCreery & Hootie & the Blowfish,51,48,9
+https://www.billboard.com/wp-content/themes/vip/pmc-billboard-2021/assets/public/lazyload-fallback.gif,Sugar On My Tongue,"Tyler, the Creator",53,41,5
+https://charts-static.billboard.com/img/2025/06/discolines-hzk-nobrokeboys-gbu-180x180.jpg,No Broke Boys,Disco Lines & Tinashe,55,50,6
+https://charts-static.billboard.com/img/2025/07/meganmoroney-1wq-6monthslater-74i-180x180.jpg,6 Months Later,Megan Moroney,54,30,9
+https://charts-static.billboard.com/img/2025/05/morgan-wallen-eos-miami-2oj-180x180.jpg,Miami,Morgan Wallen Feat. Lil Wayne & Rick Ross,48,21,7
+https://charts-static.billboard.com/img/2025/07/jeongyeon-000-takedown-h5r-180x180.jpg,Takedown,"JEONGYEON, JIHYO & CHAEYOUNG Of TWICE",60,53,7
+https://charts-static.billboard.com/img/2025/05/lainey-wilson-wci-somewhereoverlaredo-3ei-180x180.jpg,Somewhere Over Laredo,Lainey Wilson,82,54,7
+https://charts-static.billboard.com/img/2016/08/morgan-wallen-z1m-180x180.jpg,20 Cigarettes,Morgan Wallen,52,20,14
+https://charts-static.billboard.com/img/2024/11/hudsonwestbrook-9ly-houseagain-zq0-180x180.jpg,House Again,Hudson Westbrook,64,56,18
+https://charts-static.billboard.com/img/2024/12/twice-bvh-strategy-z1j-180x180.jpg,Strategy,Twice,62,57,5
+https://charts-static.billboard.com/img/2019/01/shaboozey-2wm-180x180.jpg,Amen,Shaboozey & Jelly Roll,57,56,17
+https://charts-static.billboard.com/img/2017/02/billie-eilish-lrt-180x180.jpg,Wildflower,Billie Eilish,56,17,62
+https://charts-static.billboard.com/img/2025/07/cardi-b-wld-outside-9d0-180x180.jpg,Outside,Cardi B,59,10,9
+https://charts-static.billboard.com/img/2025/08/bigxthaplug-b0q-hellatnight-va5-180x180.jpg,Hell At Night,BigXthaPlug & Ella Langley,49,49,2
+https://charts-static.billboard.com/img/2023/02/forrestfrank-6cw-180x180.jpg,Your Way's Better,Forrest Frank,61,61,18
+https://charts-static.billboard.com/img/2025/06/tatemcrae-vd8-justkeepwatching-gx4-180x180.jpg,Just Keep Watching,Tate McRae,66,33,12
+https://www.billboard.com/wp-content/themes/vip/pmc-billboard-2021/assets/public/lazyload-fallback.gif,So Far So Fake,Pierce the Veil,73,64,3
+https://charts-static.billboard.com/img/2025/03/moliy-000-shakeittothemaxfly-v8w-180x180.jpg,Shake It To The Max (Fly),"MOLIY, Silent Addy, Skillibeng & Shenseea",65,44,14
+https://charts-static.billboard.com/img/2024/03/alexwarren-1ap-180x180.jpg,Eternity,Alex Warren,58,16,5
+https://charts-static.billboard.com/img/2025/05/morgan-wallen-eos-iaintcomingback-l13-180x180.jpg,I Ain't Coming Back,Morgan Wallen Feat. Post Malone,63,8,18
+https://charts-static.billboard.com/img/2024/11/maxmcnown-0ht-bettermeforyoubrowneyes-h8h-180x180.jpg,Better Me For You (Brown Eyes),Max McNown,50,50,10
+https://charts-static.billboard.com/img/2018/06/fuerzaregida-1nc-180x180.jpg,Marlboro Rojo,Fuerza Regida,83,64,14
+https://charts-static.billboard.com/img/2025/08/cardi-b-wld-imaginaryplayerz-j24-180x180.jpg,Imaginary Playerz,Cardi B,-,70,1
+https://www.billboard.com/wp-content/themes/vip/pmc-billboard-2021/assets/public/lazyload-fallback.gif,Party 4 U,Charli xcx,75,55,18
+https://charts-static.billboard.com/img/2025/07/katseye-xrz-gabriela-iea-180x180.jpg,Gabriela,KATSEYE,76,72,5
+https://charts-static.billboard.com/img/2025/08/drake-bg5-whichone-r1g-180x180.jpg,Which One,Drake & Central Cee,67,23,4
+https://charts-static.billboard.com/img/2025/07/blackpink-jrn-jump-469-180x180.jpg,Jump,BLACKPINK,74,28,6
+https://charts-static.billboard.com/img/2025/05/morgan-wallen-eos-superman-pah-180x180.jpg,Superman,Morgan Wallen,77,8,15
+https://charts-static.billboard.com/img/2016/11/playboi-carti-ca2-180x180.jpg,Rather Lie,Playboi Carti & The Weeknd,88,4,23
+https://www.billboard.com/wp-content/themes/vip/pmc-billboard-2021/assets/public/lazyload-fallback.gif,Last One To Know,Gavin Adcock,-,77,1
+https://charts-static.billboard.com/img/2024/11/riley-green-flo-dontmindifido-5mc-180x180.jpg,Don't Mind If I Do,Riley Green Feat. Ella Langley,85,74,3
+https://charts-static.billboard.com/img/2025/03/tatemcrae-vd8-revolvingdoor-4ay-180x180.jpg,Revolving Door,Tate McRae,84,22,19
+https://charts-static.billboard.com/img/2024/05/mylessmith-w4f-180x180.jpg,Nice To Meet You,Myles Smith,89,80,11
+https://www.billboard.com/wp-content/themes/vip/pmc-billboard-2021/assets/public/lazyload-fallback.gif,Sparks,Coldplay,92,79,6
+https://www.billboard.com/wp-content/themes/vip/pmc-billboard-2021/assets/public/lazyload-fallback.gif,Went Legit,G Herbo,98,81,7
+https://www.billboard.com/wp-content/themes/vip/pmc-billboard-2021/assets/public/lazyload-fallback.gif,Frecuencia,Dareyes de La Sierra,91,82,5
+https://charts-static.billboard.com/img/2024/11/brandonlake-j1t-hardfoughthallelujah-bn9-180x180.jpg,Hard Fought Hallelujah,Brandon Lake X Jelly Roll,96,40,27
+https://www.billboard.com/wp-content/themes/vip/pmc-billboard-2021/assets/public/lazyload-fallback.gif,Ring Ring Ring,"Tyler, the Creator",78,44,5
+https://charts-static.billboard.com/img/2024/10/jelly-roll-7m0-heartofstone-9jj-180x180.jpg,Heart Of Stone,Jelly Roll,-,86,1
+https://charts-static.billboard.com/img/2016/08/morgan-wallen-z1m-180x180.jpg,TN,Morgan Wallen,97,31,14
+https://charts-static.billboard.com/img/2025/06/glorilla-nxl-typa-qxo-180x180.jpg,Typa,Glorilla,100,42,10
+https://charts-static.billboard.com/img/2016/09/gunna-n60-180x180.jpg,Just Say Dat,Gunna,46,46,2
+https://charts-static.billboard.com/img/2025/06/mgk-000-cliche-bmq-180x180.jpg,Cliche,MGK,79,62,6
+https://www.billboard.com/wp-content/themes/vip/pmc-billboard-2021/assets/public/lazyload-fallback.gif,Let Down,Radiohead,-,91,1
+https://charts-static.billboard.com/img/2018/06/fuerzaregida-1nc-180x180.jpg,Tu Sancho,Fuerza Regida,-,65,9
+https://charts-static.billboard.com/img/2016/09/gunna-n60-180x180.jpg,wgft,Gunna Feat. Burna Boy,94,93,2
+https://charts-static.billboard.com/img/2025/06/alexwarren-vcb-bloodline-b68-180x180.jpg,Bloodline,Alex Warren With Jelly Roll,-,32,12
+https://charts-static.billboard.com/img/2021/01/mariahthescientist-d3c-180x180.jpg,Is It A Crime,Mariah the Scientist & Kali Uchis,-,62,2
+https://charts-static.billboard.com/img/2016/09/gunna-n60-180x180.jpg,Forever Be Mine,Gunna Feat. Wizkid,68,68,2
+https://charts-static.billboard.com/img/2025/05/latto-28s-somebody-enh-180x180.jpg,Somebody,Latto,-,97,2
+https://charts-static.billboard.com/img/2024/09/parker-mccollum-16j-whatkindaman-6mj-180x180.jpg,What Kinda Man,Parker McCollum,-,98,1
+https://charts-static.billboard.com/img/2024/11/luke-bryan-zck-countrysongcameon-h3a-180x180.jpg,Country Song Came On,Luke Bryan,93,93,3
+https://charts-static.billboard.com/img/2016/08/suicideboys-lfr-180x180.jpg,Napoleon,$uicideboy$,95,54,3
