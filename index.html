@@ -1,237 +1,104 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Billboard Hot 100 Viewer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Expires" content="0" />
-  <title>Billboard Hot 100 Viewer</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f0f4f8;
-      margin: 0;
-      padding: 40px 20px;
-      color: #333;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
+  <body class="min-h-screen bg-slate-100 flex items-center justify-center p-5">
+    <div class="max-w-5xl mx-auto bg-white rounded-xl shadow p-6 text-center">
+      <h1 class="text-4xl font-semibold mb-5">Billboard Hot 100 Viewer</h1>
+      <p id="statusMessage" class="font-bold text-slate-500 mb-4">Loading...</p>
 
-    .container {
-      background-color: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      max-width: 900px;
-      width: 100%;
-      text-align: center;
-    }
+      <label
+        for="fileInput"
+        class="cursor-pointer rounded-md bg-blue-700 px-5 py-2 text-white hover:bg-blue-800"
+      >
+        Upload CSV File
+      </label>
+      <input id="fileInput" type="file" accept=".csv" class="hidden" />
 
-    h2 {
-      margin-bottom: 20px;
-      font-size: 2.5em;
-      font-weight: 600;
-    }
+      <div class="mt-5 overflow-x-auto rounded-lg shadow">
+        <table id="table"></table>
+      </div>
+    </div>
 
-    #statusMessage {
-      font-weight: bold;
-      margin-bottom: 20px;
-      color: #808080;
-    }
-
-    #fileInput {
-      display: none;
-    }
-
-    .file-input-label {
-      display: inline-block;
-      padding: 10px 25px;
-      background-color: rgb(26, 72, 196);
-      color: white;
-      font-size: 1em;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    .file-input-label:hover {
-      background-color: rgb(20, 60, 160);
-    }
-
-    table {
-      border-collapse: collapse;
-      margin-top: 20px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      background-color: #fff;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    th,
-    td {
-      padding: 15px;
-      text-align: center;
-      border-bottom: 1px solid #ddd;
-    }
-
-    th {
-      background-color: rgb(26, 72, 196);
-      color: white;
-      text-transform: uppercase;
-      font-weight: bold;
-    }
-
-    table tr:nth-child(2) td:not(:first-child) {
-      font-weight: bold;
-      font-size: 1.2em;
-    }
-
-    table tr:nth-child(2) td:nth-child(3):not(:first-child) {
-      font-size: 1em;
-    }
-
-    img {
-      display: block;
-    }
-
-    @media (max-width: 600px) {
-
-      th,
-      td {
-        padding: 10px;
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script>
+      const statusElement = document.getElementById("statusMessage");
+      function setStatus(msg) {
+        statusElement.textContent = msg;
       }
 
-      h2 {
-        font-size: 1.8em;
+      function renderCell(tag, cell) {
+        const el = document.createElement(tag);
+        el.className = "text-lg";
+        if (URL.canParse(cell)) {
+          const img = document.createElement("img");
+          img.src = cell;
+          img.alt = "";
+          img.loading = "lazy";
+          img.className = "w-28 object-contain";
+          el.appendChild(img);
+        } else {
+          el.textContent = cell;
+        }
+        return el;
       }
-    }
 
-    .index-cell {
-      font-size: 2em;
-      font-weight: bold;
-      letter-spacing: 0.08em;
-      text-align: center;
-      background-color: #101119;
-      color: white;
-    }
+      function displayCSV(text) {
+        const { data } = Papa.parse(text, { skipEmptyLines: true });
+        const table = document.getElementById("table");
+        table.textContent = "";
 
-    .status {
-      font-weight: bold;
-      color: #4a4a4a;
-      background-color: #ffeb3b;
-      padding: 4px;
-    }
+        data.forEach((row, i) => {
+          const tag = i === 0 ? "th" : "td";
+          const tr = document.createElement("tr");
+          if (i === 0) tr.className = "bg-blue-700 text-white";
 
-    .svg-width {
-      width: 2em;
-      display: inline-block;
-    }
-  </style>
-</head>
+          const tdIndex = document.createElement(tag);
+          tdIndex.className = "text-xl font-bold px-4 py-2";
+          tdIndex.textContent = i === 0 ? "#" : i;
+          tr.appendChild(tdIndex);
 
-<body>
-
-  <div class="container">
-    <h2>Billboard Hot 100 Viewer</h2>
-    <p id="statusMessage">Loading billboard_hot_100.csv...</p>
-    <label for="fileInput" class="file-input-label">Upload CSV File</label>
-    <input type="file" id="fileInput" accept=".csv" />
-    <table id="csvTable"></table>
-  </div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
-  <script>
-    function loadCSVFile(url) {
-      fetch(url)
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('File not found');
-          }
-          return response.text();
-        })
-        .then(csvText => {
-          const parsed = Papa.parse(csvText, {
-            header: false,
-            skipEmptyLines: true
+          row.forEach((cell) => {
+            const td = renderCell(tag, cell);
+            td.classList.add("px-4", "py-2");
+            tr.appendChild(td);
           });
-          displayCSV(parsed.data);
-          document.getElementById('statusMessage').textContent = '';
-        })
-        .catch(error => {
-          console.error('Error loading file:', error);
-          document.getElementById('statusMessage').textContent = 'File not found. Please upload a CSV file.';
+
+          table.appendChild(tr);
         });
-    }
+      }
 
-    function displayCSV(data) {
-      const table = document.getElementById('csvTable');
-      table.innerHTML = '';
-
-      data.forEach((row, index) => {
-        const tr = document.createElement('tr');
-
-        const indexCell = document.createElement('td');
-        indexCell.classList.add('index-cell');
-        if (index !== 0) indexCell.textContent = index;
-        else indexCell.style.backgroundColor = "rgb(26, 72, 196)";
-        tr.appendChild(indexCell);
-
-        row.forEach(cell => {
-          const td = document.createElement(index === 0 ? 'th' : 'td');
-          if (cell.startsWith('http')) {
-            const img = document.createElement('img');
-            img.src = cell;
-            img.alt = cell;
-            img.style = "margin: -10px; width: 120px; height: 120px; object-fit: cover;";
-            td.appendChild(img);
-          } else if (cell.startsWith("<svg")) {
-            td.innerHTML = "<div class='svg-width'>" + cell + "</div>";
-          } else if (cell.startsWith("<span>")) {
-            td.innerHTML = "<div class='status'>" + cell + "</div>";
-          } else {
-            switch (cell) {
-              case "right":
-                td.innerHTML = '<svg style="width: 100 %; height:auto" viewbox="0 0 26.191 26.191" xmlns="http://www.w3.org/2000/svg"><g data-name="Group 3" transform="translate(-626 -1915)"><circle cx="13.095" cy="13.095" data-name="Ellipse 494" fill="#8289a1" r="13.095" transform="translate(626 1915)"></circle><path d="M642.771 1928.989h-10.77v-1.82h10.77l-4.746-4.882 1.251-1.287 6.882 7.079-6.882 7.079-1.251-1.288z" fill="#fff"></path></g></svg>'
-                break;
-              case "up":
-                td.innerHTML = '<svg style="width: 100 %; height:auto" viewbox="0 0 26.191 26.191" xmlns="http://www.w3.org/2000/svg"><g data-name="Group 7170" transform="translate(-626 -1965.469)"><circle cx="13.095" cy="13.095" data-name="Ellipse 494" fill="#448118" r="13.095" transform="translate(626 1965.469)"></circle><path d="M639.989 1975.227v10.77h-1.82v-10.77l-4.882 4.746-1.287-1.251 7.079-6.882 7.079 6.882-1.288 1.251z" fill="#fff"></path></g></svg>'
-                break;
-              case "down":
-                td.innerHTML = '<svg style="width: 100 %; height:auto" viewbox="0 0 26.191 26.191" xmlns="http://www.w3.org/2000/svg"><g data-name="Group 7171"><g data-name="final red"><circle cx="13.095" cy="13.095" data-name="Ellipse 494" fill="#b91b20" r="13.095"></circle></g><path d="M12.167 17.141V6.371h1.82v10.77l4.882-4.746 1.287 1.251-7.079 6.882-7.079-6.882 1.288-1.251z" fill="#fff"></path></g></svg>'
-                break;
-              default:
-                td.textContent = cell;
-            }
-          }
-          tr.appendChild(td);
-        });
-        table.appendChild(tr);
-      });
-    }
-
-    document.getElementById('fileInput').addEventListener('change', function (e) {
-      const file = e.target.files[0];
-      if (file) {
+      document.getElementById("fileInput").addEventListener("change", (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
         const reader = new FileReader();
-        reader.onload = function (event) {
-          const parsed = Papa.parse(event.target.result, {
-            header: false,
-            skipEmptyLines: true
-          });
-          displayCSV(parsed.data);
-          document.getElementById('statusMessage').textContent = file.name + ' loaded successfully!';
+        reader.onload = (event) => {
+          displayCSV(event.target.result);
+          setStatus(file.name + " loaded successfully!");
         };
         reader.readAsText(file);
+      });
+
+      async function loadCSVFile(url) {
+        try {
+          const response = await fetch(url);
+          if (!response.ok) throw new Error("File not found");
+
+          const text = await response.text();
+          displayCSV(text);
+          setStatus("");
+        } catch (err) {
+          console.error("Error loading file:", err);
+          setStatus("File not found. Please upload a CSV file.");
+        }
       }
-    });
 
-    loadCSVFile('billboard_hot_100.csv');
-  </script>
-
-</body>
-
+      loadCSVFile("billboard_hot_100.csv");
+    </script>
+  </body>
 </html>
