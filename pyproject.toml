@@ -1,0 +1,10 @@
+[project]
+name = "billboard-hot-100-web-scraper"
+version = "0.1.0"
+description = "Python application that scrapes Billboard's Hot 100 Chart using BeautifulSoup"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "bs4>=0.0.2",
+    "requests>=2.32.5",
+]

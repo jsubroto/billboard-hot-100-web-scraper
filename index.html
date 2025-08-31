@@ -30,6 +30,9 @@
       const statusElement = document.getElementById("statusMessage");
       function setStatus(msg) {
         statusElement.textContent = msg;
+        setTimeout(() => {
+          if (statusElement.textContent === msg) statusElement.textContent = "";
+        }, 3000);
       }
 
       function renderCell(tag, cell) {
@@ -84,7 +87,7 @@
         reader.readAsText(file);
       });
 
-      async function loadCSVFile(url) {
+      async function loadCsv(url) {
         try {
           const response = await fetch(url);
           if (!response.ok) throw new Error("File not found");
@@ -98,7 +101,7 @@
         }
       }
 
-      loadCSVFile("billboard_hot_100.csv");
+      loadCsv("billboard_hot_100.csv");
     </script>
   </body>
 </html>
