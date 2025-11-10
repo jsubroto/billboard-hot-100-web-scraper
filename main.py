@@ -6,16 +6,14 @@ from bs4 import BeautifulSoup
 URL = "https://www.billboard.com/charts/hot-100/"
 
 
-def ask_yes_no(question: str) -> bool:
+def ask_yes_no(q: str) -> bool:
     while True:
-        answer = input(f"{question} (y/n): ").strip().lower()
-        match answer:
-            case "y" | "yes":
-                return True
-            case "n" | "no":
-                return False
-            case _:
-                print("Invalid input, please enter y or n.")
+        a = input(f"{q} (y/N): ").strip().lower()
+        if a in {"y", "yes"}:
+            return True
+        if a in {"", "n", "no"}:
+            return False
+        print("Invalid input, please enter y or n.")
 
 
 def main():
@@ -53,9 +51,9 @@ def main():
             weeks_on_chart = stats_dict.get("WEEKS")
 
             row = []
-            if is_scraping_images:
-                img_tag = container.find("img")
-                row.append((img_tag.attrs.get("data-lazy-src") or img_tag.attrs.get("src")) if img_tag else "N/A")
+            if is_scraping_images and (img := container.find("img")):
+                src = img.get("data-lazy-src") or img.get("src")
+                row.append(src or "N/A")
 
             row += [
                 song,
