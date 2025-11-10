@@ -29,18 +29,19 @@ def main():
 
     filename = "billboard_hot_100.csv"
     base = ["Image"] if is_scraping_images else []
-    headers = base + ["Song", "Artist", "Last Week", "Peak Position", "Weeks on Chart"]
+    headers = base + ["Song", "Artist", "Last Week", "Peak", "Weeks"]
 
-    with open(filename, "w") as csv_file:
-        writer = csv.writer(csv_file)
+    with open(filename, "w") as f:
+        writer = csv.writer(f)
         writer.writerow(headers)
 
-        for i, container in enumerate(soup.select("ul.o-chart-results-list-row")):
-            song = container.find("h3", {"class": "c-title"}).text.strip()
-            artist = container.find("span", {"class": "a-no-trucate"}).text.strip()
+        rows = soup.select("ul.o-chart-results-list-row")
+        for i, container in enumerate(rows, 1):
+            song = container.find("h3", class_="c-title").text.strip()
+            artist = container.find("span", class_="a-no-trucate").text.strip()
 
             stats = (
-                container.find_all("ul", {"class": "lrv-a-unstyle-list"})[-1]
+                container.find_all("ul", class_="lrv-a-unstyle-list")[-1]
                 .text.strip()
                 .split()
             )  # ['LW', '1', 'PEAK', '1', 'WEEKS', '1']
@@ -65,20 +66,15 @@ def main():
             writer.writerow(row)
 
             if is_printing_console:
-                for label, value in [
-                    ("\nPosition", f"#{i + 1}"),
-                    ("Song", song),
-                    ("Artist", artist),
-                    ("Last Week", last_week),
-                    ("Peak Position", peak_position),
-                    ("Weeks on Chart", weeks_on_chart),
-                ]:
-                    print(f"{label}: {value}")
+                print(
+                    f"\n#{i}: {song} — {artist}\n"
+                    f"  Last Week: {last_week}\n"
+                    f"  Peak: {peak_position}\n"
+                    f"  Weeks: {weeks_on_chart}"
+                )
 
     print(f"\nWeb scraped data saved to {filename}")
-    print(
-        "Thank you for using Jaimes Subroto's Web Scraping app for Billboard HOT 100!"
-    )
+    print("Thanks for using Jaimes Subroto's Billboard HOT 100 Web Scraper!")
 
 
 if __name__ == "__main__":
