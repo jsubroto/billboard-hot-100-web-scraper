@@ -55,7 +55,7 @@ def main():
             row = []
             if is_scraping_images:
                 img_tag = container.find("img")
-                row.append(img_tag["src"] if img_tag else "N/A")
+                row.append((img_tag.attrs.get("data-lazy-src") or img_tag.attrs.get("src")) if img_tag else "N/A")
 
             row += [
                 song,
