@@ -1,4 +1,5 @@
 import csv
+from shutil import copyfile
 
 import requests
 from bs4 import BeautifulSoup
@@ -74,6 +75,8 @@ def main():
                 )
 
     print(f"\nWeb scraped data saved to {filename}")
+    copyfile(filename, f"docs/{filename}")
+    print("Copied CSV to docs/ for GitHub Pages")
     print("Thanks for using Jaimes Subroto's Billboard HOT 100 Web Scraper!")
 
 

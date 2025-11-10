@@ -2,21 +2,26 @@
 
 ![Billboard Logo](https://i2.wp.com/263chat.com/wp-content/uploads/2017/12/billboard-top-100.jpg?fit=1024%2C807&ssl=1)
 
-Python application that scrapes *[Billboard's Hot 100 Chart](https://www.billboard.com/charts/hot-100)* using **BeautifulSoup**. 
+Python application that scrapes [**Billboard’s Hot 100 Chart**](https://www.billboard.com/charts/hot-100) using **BeautifulSoup**, then exports the data to a CSV file and visualizes it in a Tailwind-powered web viewer.
 
-The scraped data is stored in a CSV file named `billboard_hot_100.csv`.
+🔗 **Live Viewer:** [GitHub Pages Demo](https://jsubroto.github.io/billboard-hot-100-web-scraper/)
 
-## CSV schema
+---
 
-Columns:
-- Image
-- Song
-- Artist
-- Last Week
-- Peak Position
-- Weeks on Chart
+## 📊 CSV Schema
 
-## Installation
+| Column | Description |
+| ------ | ----------- |
+| Image | Album artwork URL |
+| Song | Song title |
+| Artist | Artist or group |
+| Last Week | Previous chart position |
+| Peak | Highest chart position reached |
+| Weeks | Number of weeks on chart |
+
+---
+
+## 🐍 Run the Scraper
 
 ```bash
 # clone repository
@@ -25,38 +30,41 @@ cd billboard-hot-100-web-scraper
 
 # install dependencies
 uv sync
-```
 
-## Run the scraper
-
-```bash
+# run the scraper
 uv run main.py
 ```
 
-Output: `billboard_hot_100.csv` in the project root.
+This will generate `billboard_hot_100.csv` in the project root.
 
-## View the CSV in a styled HTML table
+---
 
-`index.html` uses Tailwind (CDN) and PapaParse to render the CSV. It will:
+## 💻 View the Results
 
-- Auto-load `billboard_hot_100.csv` if present in the same directory.
-- Fallback to a file picker so you can upload any CSV.
+### Option 1 – Online (GitHub Pages)
+The latest scraped CSV is rendered automatically here:  
+👉 [**Live Billboard Hot 100 Viewer**](https://jsubroto.github.io/billboard-hot-100-web-scraper/)
 
-Steps:
+### Option 2 – Local Development
+Serve locally to test your own CSV:
 ```bash
-# from the project directory
-uv run -m http.server 3000
-# then open:
-localhost:3000
+uv run -m http.server 3000 -d docs
 ```
+Then open [http://localhost:3000](http://localhost:3000)
 
-## Notes
+> The viewer uses PapaParse to read the CSV and Tailwind for styling.  
+> If no local `billboard_hot_100.csv` is found, you can upload one manually.
 
-- Browsers block file:// fetches. Serve over HTTP as above.
-- The viewer expects the first CSV row to contain headers.
-- Image cells: if a cell parses as a URL, it is rendered as an <img>.
+---
 
-## License
+## 📝 Notes
+
+- The web viewer automatically displays album art, song, artist, and chart stats in a Billboard-style layout.  
+- Works with the generated CSV or any file following the same schema.  
+- For browser security reasons, fetching local files requires serving via HTTP (not `file://`).
+
+---
+
+## 🪪 License
 
 [MIT](LICENSE)
-

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Billboard Hot 100 Viewer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="min-h-screen bg-slate-100 p-5">
+    <main class="max-w-5xl mx-auto bg-white rounded-xl shadow p-6">
+      <h1 class="text-3xl font-semibold text-center mb-4">
+        Billboard Hot 100 Viewer
+      </h1>
+
+      <div class="flex flex-col items-center gap-3 mb-4">
+        <label
+          for="fileInput"
+          class="cursor-pointer rounded-md bg-blue-700 px-4 py-2 text-white hover:bg-blue-800"
+          >Upload CSV</label
+        >
+        <input id="fileInput" type="file" accept=".csv" class="hidden" />
+        <p id="statusMessage" class="text-slate-500"></p>
+      </div>
+
+      <div id="chart" class="space-y-4"></div>
+    </main>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"
+      defer
+    ></script>
+    <script src="./script.js" defer></script>
+  </body>
+</html>
